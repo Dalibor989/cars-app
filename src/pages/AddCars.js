@@ -82,6 +82,19 @@ function AddCars() {
     })
   }
 
+  const reset = () => {
+    
+    setCar({
+      brand: '',
+        model: '',
+        year: 1990,
+        maxSpeed: 0,
+        isAutomatic: false,
+        engine: '',
+        numberOfDoors: '',
+    });
+  }
+
   return (
     <div>
       <form onSubmit={addCar}>
@@ -141,6 +154,7 @@ function AddCars() {
           <label>hybrid </label>
           </div>
           <button>Submit</button>
+          <button onClick={reset}>Reset</button>
       </form>
     </div>
   )
