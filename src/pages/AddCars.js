@@ -1,7 +1,10 @@
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom'
 import carService from '../services/CarService';
 
 function AddCars() {
+  const history = useHistory();
+  
   const [car, setCar] = useState({
     brand: '',
     model: '',
@@ -19,13 +22,15 @@ function AddCars() {
     
     setCar({
       brand: '',
-      model: '',
-      year: 1990,
-      maxSpeed: 0,
-      isAutomatic: false,
-      engine: '',
-      numberOfDoors: '',
+        model: '',
+        year: 1990,
+        maxSpeed: 0,
+        isAutomatic: false,
+        engine: '',
+        numberOfDoors: '',
     });
+
+    history.push('/cars');
   }
 
   const handleBrandChange = (e) => {
