@@ -103,9 +103,9 @@ function AddCars() {
     <div>
       <form onSubmit={addCar}>
       <label>Brand</label>
-      <input placeholder="brand" name="brand" type="text" value={car.brand} onChange={handleBrandChange}></input>
+      <input required minlength="2" placeholder="brand" name="brand" type="text" value={car.brand} onChange={handleBrandChange}></input>
       <label>Model</label>
-      <input placeholder="model" name="model" type="text" value={car.model} onChange={handleModelChange}></input>
+      <input required minlength="2" placeholder="model" name="model" type="text" value={car.model} onChange={handleModelChange}></input>
       <label>Max Speed</label>
       <input type="number" placeholder="max 300" name="maxSpeed" min="1" max="300" value={car.maxSpeed} onChange={handleSpeedChange }></input> 
       <label>Number of Doors</label> 
