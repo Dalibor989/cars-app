@@ -17,6 +17,15 @@ class CarService {
       console.log('Greska', error);
     }
   }
+
+  async addCar(newVehicle) {
+    try {
+      const { data } = await this.apiClient.post('cars', newVehicle);
+      return data;
+    } catch (error) {
+      console.log('Greska', error);
+    }
+  }
 }
 
 export default new CarService();
