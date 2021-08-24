@@ -86,13 +86,17 @@ function AddCars() {
     
     setCar({
       brand: '',
-        model: '',
-        year: 1990,
-        maxSpeed: 0,
-        isAutomatic: false,
-        engine: '',
-        numberOfDoors: '',
+      model: '',
+      year: 1990,
+      maxSpeed: 0,
+      isAutomatic: false,
+      engine: '',
+      numberOfDoors: '',
     });
+  }
+
+  const preview = () => {
+    alert(`Brand: ${car.brand} \n Model: ${car.model} \n Max speed: ${car.maxSpeed} \n Number of doors: ${car.numberOfDoors} \n Year of production: ${car.year} \n Automatic: ${car.isAutomatic} \n Engine type: ${car.engine} `)
   }
 
   return (
@@ -152,9 +156,10 @@ function AddCars() {
           <label>electric </label>
           <input type="radio" name="fuel" value='hybrid' onChange={handleEngineChange}></input>
           <label>hybrid </label>
-          </div>
+        </div>
+          <button type="button" onClick={preview}>Preview</button>
           <button>Submit</button>
-          <button onClick={reset}>Reset</button>
+          <button type="button" onClick={reset}>Reset</button>
       </form>
     </div>
   )
