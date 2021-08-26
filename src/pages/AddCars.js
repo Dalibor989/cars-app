@@ -96,7 +96,7 @@ function AddCars() {
   }
 
   const preview = () => {
-    alert(`Brand: ${car.brand} \n Model: ${car.model} \n Max speed: ${car.maxSpeed} \n Number of doors: ${car.numberOfDoors} \n Year of production: ${car.year} \n Automatic: ${car.isAutomatic} \n Engine type: ${car.engine} `)
+    alert(`Brand: ${car.brand} \n Model: ${car.model} \n Max speed: ${car.maxSpeed} \n Number of doors: ${car.numberOfDoors} \n Year of production: ${car.year} \n Automatic: ${car.isAutomatic ? 'Yes' : 'No'} \n Engine type: ${car.engine} `)
   }
 
   return (
@@ -149,13 +149,13 @@ function AddCars() {
         <div>
           <p>Engine of your car?</p>
           <input type="radio" name="fuel" value='diesel' onChange={handleEngineChange}></input>
-          <label>diesel </label>
+          <label>Diesel </label>
           <input type="radio" name="fuel" value='petrol' onChange={handleEngineChange}></input>
-          <label>petrol </label>
+          <label>Petrol </label>
           <input type="radio" name="fuel" value='electric' onChange={handleEngineChange}></input>
-          <label>electric </label>
+          <label>Electric </label>
           <input type="radio" name="fuel" value='hybrid' onChange={handleEngineChange}></input>
-          <label>hybrid </label>
+          <label>Hybrid </label>
         </div>
           <button type="button" onClick={preview}>Preview</button>
           <button>Submit</button>
